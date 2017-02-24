@@ -1,0 +1,31 @@
+[user]
+name = Tim Williams
+email = tim.williams.public@gmail.com
+
+[push]
+   default = simple
+
+[alias]
+   cm  = commit
+   co  = checkout
+
+   # Compares a commit with its parent in a directory mode (all files in parallel, not serial)
+   dd = "!f() { git difftool --dir-diff -C -M $1^ $1; }; f"
+
+[diff]
+  tool = kdiff3
+  algorithm = patience
+
+[difftool]
+  prompt = false
+
+[difftool "kdiff3"]
+  # cmd = kdiff3 $(cygpath -aw $LOCAL) $(cygpath -aw $REMOTE)
+  cmd = kdiff3 $LOCAL $REMOTE
+
+[merge]
+	conflictstyle = diff3
+
+[core]
+	autocrlf = false
+	# excludesfile = C:\\Users\\timwi\\Documents\\gitignore_global.txt

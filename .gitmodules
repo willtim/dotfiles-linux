@@ -1,0 +1,6 @@
+[submodule ".dynamic-colors"]
+	path = .dynamic-colors
+	url = git@github.com:willtim/dynamic-colors.git
+[submodule "nixos"]
+	path = nixos
+	url = git@github.com:willtim/nixos.git

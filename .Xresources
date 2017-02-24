@@ -1,0 +1,129 @@
+! === URxvt ===
+
+! Extensions
+URxvt*perl-ext-common:          default,clipboard,url-select,keyboard-select
+URxvt*perl-lib:                 /home/tim/urxvt-perl
+! URxvt*perl-lib:                 /etc/nixos/conf/urxvt-perl
+! Looks
+URxvt*font:                     xft:Consolas:size=16
+URxvt*termName:                 rxvt-256color
+URxvt*xftAntialias:             true
+URxvt*scrollBar:                false
+URxvt.internalBorder:           10
+! Clickable urls
+URxvt.url-select.underline:     true
+URxvt.url-launcher:             xdg-open
+URxvt.matcher.button:           1
+! Change keybinding for copy/paste
+! Make it the same as Mintty on windows
+! NOTE: URxvt natively supports Ctrl+Meta+C and Ctrl+Meta+V
+URxvt*iso14755:                 false
+URxvt.keysym.Control-C:         perl:clipboard:copy
+URxvt.keysym.Control-V:         perl:clipboard:paste
+URxvt.letterSpace:              -1
+URxvt.lineSpace:                2
+URxvt.keysym.Mod1-f:            perl:keyboard-select:search
+URxvt.keysym.Mod1-s:            perl:keyboard-select:activate
+URxvt.keysym.Mod1-u:            perl:url-select:select_next
+
+! Switch colours dynamically, see .bashrc
+Urxvt*dynamicColors: on
+
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
+
+
+! Common
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+
+! Dark
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+URxvt*background:         S_base03
+URxvt*foreground:         S_base0
+URxvt*cursorColor:             S_base1
+URxvt*pointerColorBackground:  S_base01
+URxvt*pointerColorForeground:  S_base1
+URxvt.intensityStyles: false
+
+URxvt*color0:                  S_base02
+URxvt*color1:                  S_red
+URxvt*color2:                  S_green
+URxvt*color3:                  S_yellow
+URxvt*color4:                  S_blue
+URxvt*color5:                  S_magenta
+URxvt*color6:                  S_cyan
+URxvt*color7:                  S_base2
+URxvt*color8:                  S_base03
+URxvt*color9:                  S_orange
+URxvt*color10:                 S_base01
+URxvt*color11:                 S_base00
+URxvt*color12:                 S_base0
+URxvt*color13:                 S_violet
+URxvt*color14:                 S_base1
+URxvt*color15:                 S_base3
+
+
+! === rofi ===
+
+rofi.modi:                           ssh,drun,run,window
+rofi.sidebar-mode:                   true
+rofi.terminal:                       my-terminal
+rofi.ssh-client:                     ssh
+rofi.ssh-command:                    {terminal} -e "{ssh-client} {host}"
+rofi.opacity:                        100
+rofi.width:                          50
+rofi.lines:                          8
+rofi.columns:                        1
+rofi.font:                           Consolas 24
+! Solarized Dark colours
+! State:           'bg', 'fg', 'bgalt', 'hlbg', 'hlfg'
+rofi.color-enabled: true
+rofi.color-window: #002b37, #008ed4, #003642
+rofi.color-normal: #002b37, #819396, #003643, #008ed4, #ffffff
+rofi.color-active: #002b37, #008ed4, #003643, #008ed4, #66c6ff
+rofi.color-urgent: #002b37, #da4281, #003643, #008ed4, #890661
+
+! Border width
+rofi.bw:                             5
+
+rofi.location:                       0
+rofi.padding:                        20
+rofi.levenshtein-sort:               true
+rofi.case-sensitive:                 false
+rofi.fuzzy:                          false
+rofi.line-margin:                    2
+rofi.separator-style:                solid
+rofi.hide-scrollbar:                 true
+rofi.markup-rows:                    false
+rofi.scrollbar-width:                8
