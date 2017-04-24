@@ -38,8 +38,7 @@ bottom = true
 
 modules-left = workspaces
 modules-center =
-modules-right = ethernet cpu ram root volumeintel battery date powermenu
-; TODO wifi
+modules-right = cpu ram root volumeintel battery date wifi powermenu
 ; TODO backlight?
 
 tray-position = right
@@ -95,8 +94,7 @@ label-connected = %{A:cmst &:} %upspeed% %downspeed%%{A}
 
 [module/wifi]
 type = internal/network
-; interface = wlp3s0
-interface = enp0s3
+interface = wlp4s0
 ping-interval = 5
 
 accumulate-stats = true
