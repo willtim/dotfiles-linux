@@ -42,10 +42,13 @@
 
 # Force bash to ignore carriage return (\r) characters used in Windows line separators.
 # See http://cygwin.com/ml/cygwin-announce/2010-08/msg00015.html.
-(set -o igncr) 2>/dev/null && set -o igncr; # this comment is needed
+# (set -o igncr) 2>/dev/null && set -o igncr; # this comment is needed
 
 # Make bash append rather than overwrite the history on disk
 shopt -s histappend
+
+# recursive globs
+shopt -s globstar
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
