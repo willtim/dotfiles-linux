@@ -13,7 +13,7 @@ exec --no-startup-id unclutter -idle 3
 exec --no-startup-id redshift-gtk -l 51.336:0.267 -t 6500:3500
 exec --no-startup-id copyq
 exec --no-startup-id dunst
-# exec --no-startup-id dropbox
+exec --no-startup-id dropbox
 
 # assign variables
 set $mod Mod4
@@ -182,15 +182,15 @@ bindsym $mod+Shift+9 move container to workspace $WS9
 bindsym $mod+Shift+0 move container to workspace $WS10
 
 # Assign windows to their respective workspaces
-assign [class="Google-chrome"]      $WS1
-assign [class="Chromium|Chrome"]    $WS1
-assign [class="Firefox"]            $WS1
-assign [class="Emacs"]              $WS2
-assign [class="Mendeley"]           $WS6
-assign [class="Deadbeef"]           $WS7
-assign [class="Skype"]              $WS8
-assign [class="Thunderbird"]        $WS9
-assign [class="Recoll"]             $WS10
+assign [class="Google-chrome"]       $WS1
+assign [class="Chromium|Chrome"]     $WS1
+assign [class="Firefox"]             $WS1
+assign [class="Emacs"]               $WS2
+assign [class="Mendeley"]            $WS6
+assign [class="Deadbeef"]            $WS7
+assign [class="Skype|skypeforlinux"] $WS8
+assign [class="Thunderbird"]         $WS9
+assign [class="Recoll"]              $WS10
 
 # disable title bars on new windows (not floats)
 new_window pixel 2
@@ -221,6 +221,9 @@ bindsym Shift+XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +1%; pkill -SIG
 bindsym Shift+XF86AudioLowerVolume exec "pactl set-sink-volume 0 -1%; pkill -SIGRTMIN+10 i3blocks"
 
 bindsym XF86Launch1 exec "pavucontrol"
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
