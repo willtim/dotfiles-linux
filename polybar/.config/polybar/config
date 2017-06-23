@@ -38,7 +38,8 @@ bottom = true
 
 modules-left = workspaces
 modules-center =
-modules-right = cpu ram root volumeintel battery date wifi powermenu
+modules-right = cpu ram root volumeintel backlight battery date wifi
+; TODO powermenu
 ; TODO backlight?
 
 tray-position = right
@@ -74,7 +75,10 @@ label-urgent-foreground = ${colors.white}
 ; label = %title%
 ; label-maxlen = 75
 
-; [module/backlight]
+[module/backlight]
+type = internal/xbacklight
+format = <label>
+label =  %percentage%%
 
 [module/ethernet]
 type = internal/network
@@ -234,10 +238,10 @@ menu-0-1-exec = menu-open-2
 menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+menu-1-1-exec = reboot
 
 menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
+menu-2-0-exec = poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 

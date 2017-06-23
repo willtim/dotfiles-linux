@@ -24,7 +24,7 @@ set $WS1 1 
 set $WS2 2 emacs
 set $WS3 3 
 set $WS4 4
-set $WS5 5
+set $WS5 5 
 set $WS6 6 
 set $WS7 7 
 # set $WS8 8 
@@ -153,7 +153,10 @@ bindsym $mod+a focus parent
 bindsym $mod+d focus child
 
 # move workspace between outputs
-bindsym $mod+m move workspace to output left
+bindsym $mod+Shift+m move workspace to output left
+
+# focus workspace on other output
+bindsym $mod+m focus output left
 
 # switch to workspace
 bindsym $mod+grave workspace $WS0
@@ -206,9 +209,6 @@ for_window [class="Keepassx"] border normal
 for_window [class="Arandr"] floating enable
 for_window [class="Arandr"] border normal
 
-# external displays
-bindsym XF86Display exec "display-toggle"
-
 # misc
 bindsym Print exec scrot '%Y-%m-%d_%T_scrot.png' -e 'mv $f ~/Pictures/'
 
@@ -220,7 +220,11 @@ bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%; pkill -SIGRTMIN+
 bindsym Shift+XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +1%; pkill -SIGRTMIN+10 i3blocks"
 bindsym Shift+XF86AudioLowerVolume exec "pactl set-sink-volume 0 -1%; pkill -SIGRTMIN+10 i3blocks"
 
-bindsym XF86Launch1 exec "pavucontrol"
+# additional X1 Carbon buttons
+bindsym XF86Tools    exec "urxvt -e htop"
+bindsym XF86Search   exec "recoll"
+bindsym XF86LaunchA  exec "pavucontrol"
+bindsym XF86Explorer exec "display-toggle"
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
