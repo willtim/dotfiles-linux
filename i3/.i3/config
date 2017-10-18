@@ -19,8 +19,8 @@ exec --no-startup-id dropbox
 set $mod Mod4
 
 set $WS0 0 
-set $WS1 1 
-# set $WS1 1 
+# set $WS1 1 
+set $WS1 1 
 set $WS2 2 emacs
 set $WS3 3 
 set $WS4 4

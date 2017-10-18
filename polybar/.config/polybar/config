@@ -28,9 +28,11 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 ; underline-size = 0
 ; overline-size = 0
-; font-0 = System San Francisco Text:size=15;2
-font-0 = Arial:size=15;2
-font-1 = FontAwesome:size=15;2
+; font-0 = "System San Francisco Text:size=15;2"
+;; NOTE: the order matters here due to conflicts
+font-0 = "FontAwesome:size=15;2"
+font-1 = "Arial:size=15;2"
+
 
 [bar/bottom]
 inherit = bar/master
