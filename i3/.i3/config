@@ -7,12 +7,13 @@ exec --no-startup-id compton -b --config ~/.compton.conf
 exec --no-startup-id udiskie --no-tray
 exec --no-startup-id connman-notify
 exec --no-startup-id unclutter -idle 3
+exec --no-startup-id dunst
+exec --no-startup-id /home/tim/bin/low-battery-check-alert
 # exec --no-startup-id nm-applet --sm-disable # NetworkManager, if not using connman
 # exec --no-startup-id conky
 # exec --no-startup-id xflux -l 51 -k 3400
 exec --no-startup-id redshift-gtk -l 51.336:0.267 -t 6500:3500
 exec --no-startup-id copyq
-exec --no-startup-id dunst
 exec --no-startup-id dropbox
 
 # assign variables
