@@ -12,7 +12,7 @@ exec --no-startup-id /home/tim/bin/low-battery-check-alert
 # exec --no-startup-id nm-applet --sm-disable # NetworkManager, if not using connman
 # exec --no-startup-id conky
 # exec --no-startup-id xflux -l 51 -k 3400
-exec --no-startup-id redshift-gtk -l 51.336:0.267 -t 6500:3500
+exec --no-startup-id redshift-gtk -l 51.336:0.267 -t 6500:3500 -m randr:preserve=1
 exec --no-startup-id copyq
 exec --no-startup-id dropbox
 
@@ -225,7 +225,7 @@ bindsym Shift+XF86AudioLowerVolume exec "pactl set-sink-volume 0 -1%; pkill -SIG
 bindsym XF86Tools    exec "urxvt -e htop"
 bindsym XF86Search   exec "recoll"
 bindsym XF86LaunchA  exec "pavucontrol"
-bindsym XF86Explorer exec "display-toggle"
+bindsym XF86Explorer exec "pcmanfm-qt"
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10

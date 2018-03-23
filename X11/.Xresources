@@ -1,7 +1,7 @@
 ! === URxvt ===
 
 ! Extensions
-URxvt*perl-ext-common:          default,clipboard,url-select,keyboard-select
+URxvt*perl-ext-common:          default,clipboard,url-select,keyboard-select,font-size
 URxvt*perl-lib:                 /home/tim/urxvt-perl
 ! URxvt*perl-lib:                 /etc/nixos/conf/urxvt-perl
 ! Looks
