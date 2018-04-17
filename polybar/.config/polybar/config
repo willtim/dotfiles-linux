@@ -45,12 +45,12 @@ modules-right = cpu ram root volumeintel backlight battery date wifi
 ; TODO backlight?
 
 tray-position = right
-tray-padding = 8
+tray-padding = 16
 ; tray-background = ${colors.tblack}
 tray-transparent = false
 
 padding-left = 0
-padding-right = 8
+padding-right = 16
 module-margin-left = 1
 module-margin-right = 1
 
