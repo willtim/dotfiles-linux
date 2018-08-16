@@ -262,7 +262,7 @@ alias dark='source ~/dotfiles/mintty/sol-tmux.dark;tmux source-file ~/dotfiles/t
 # alias cd=cd_func
 
 export TERM=rxvt-256color
-
+export LS_OPTIONS=--color
 export PATH="$HOME/.dynamic-colors/bin:$PATH"
 source $HOME/.dynamic-colors/completions/dynamic-colors.bash
 alias light="dynamic-colors switch solarized-light"

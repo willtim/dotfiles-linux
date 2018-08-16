@@ -172,6 +172,9 @@ bindsym $mod+8 workspace $WS8
 bindsym $mod+9 workspace $WS9
 bindsym $mod+0 workspace $WS10
 
+bindsym $mod+z workspace prev
+bindsym $mod+x workspace next
+
 # move focused container to workspace
 bindsym $mod+Shift+grave move container to workspace $WS0
 bindsym $mod+Shift+1 move container to workspace $WS1
@@ -225,10 +228,12 @@ bindsym Shift+XF86AudioLowerVolume exec "pactl set-sink-volume 0 -1%; pkill -SIG
 bindsym XF86Tools    exec "urxvt -e htop"
 bindsym XF86Search   exec "recoll"
 bindsym XF86LaunchA  exec "pavucontrol"
-bindsym XF86Explorer exec "pcmanfm-qt"
+bindsym XF86Explorer exec "nautilus"
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+bindsym XF86Display exec ~/bin/toggle-display
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -277,12 +282,6 @@ bindsym $mod+c [class="Chromium|Chrome"] focus
 
 # toggle copyq
 bindsym $mod+q exec "copyq toggle"
-
-# keepassx
-bindsym $mod+x exec "keepassx"
-
-# thunar
-# bindsym $mod+t exec thunar
 
 # launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
